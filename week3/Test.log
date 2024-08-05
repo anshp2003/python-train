@@ -1,0 +1,42 @@
+2024-08-05 16:07:42,814 - INFO - this is an info message
+2024-08-05 16:07:42,814 - WARNING - this is an warning
+2024-08-05 16:07:42,814 - ERROR - this is an error message
+2024-08-05 16:07:42,814 - CRITICAL - this is a critical
+2024-08-05 16:12:28,834 - INFO - Dividing 10 2 gives 5.0
+2024-08-05 16:12:28,834 - ERROR - attemted to divide by zero
+Traceback (most recent call last):
+  File "c:\Users\hp\Desktop\ansh\python training\week3\Day3\logging22.py", line 28, in divide
+    result=a/b
+           ~^~
+ZeroDivisionError: division by zero
+2024-08-05 16:12:44,361 - INFO - Dividing 10 2 gives 5.0
+2024-08-05 16:12:44,361 - ERROR - attemted to divide by zero
+Traceback (most recent call last):
+  File "c:\Users\hp\Desktop\ansh\python training\week3\Day3\logging22.py", line 28, in divide
+    result=a/b
+           ~^~
+ZeroDivisionError: division by zero
+2024-08-05 16:13:21,717 - INFO - Dividing 10 2 gives 5.0
+2024-08-05 16:13:21,717 - ERROR - attemted to divide by zero
+2024-08-05 16:14:25,508 - INFO - Dividing 10 2 gives 5.0
+2024-08-05 16:14:46,916 - ERROR - attemted to divide by zero
+2024-08-05 16:16:14,650 - INFO - Dividing 10 2 gives 5.0
+2024-08-05 16:16:14,650 - ERROR - attemted to divide by zero
+2024-08-05 16:16:28,060 - INFO - Dividing 10 2 gives 5.0
+2024-08-05 16:16:28,060 - ERROR - attemted to divide by zero
+Traceback (most recent call last):
+  File "c:\Users\hp\Desktop\ansh\python training\week3\Day3\logging22.py", line 28, in divide
+    result=a/b
+           ~^~
+ZeroDivisionError: division by zero
+2024-08-05 16:19:17,498 - INFO - This is an info message
+2024-08-05 16:19:17,498 - WARNING - This is a warning message
+2024-08-05 16:19:17,498 - ERROR - This is an error message
+2024-08-05 16:19:17,498 - CRITICAL - This is a critical message
+2024-08-05 16:19:17,498 - INFO - Dividing 10 by 2 gives 5.0
+2024-08-05 16:19:17,498 - ERROR - Attempted to divide by zero
+Traceback (most recent call last):
+  File "c:\Users\hp\Desktop\ansh\python training\week3\Day3\logging22.py", line 46, in divide
+    result = a / b
+             ~~^~~
+ZeroDivisionError: division by zero
