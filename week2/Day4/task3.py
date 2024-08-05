@@ -14,8 +14,11 @@ class bankaccount:
             self.balance-=amount   
             return self 
         else:
-            print("error")   
-
+            print("error")          
+    def deposit(self,amount):
+        return self.__add__(amount)
+    def withdraw(self,amount):
+        return self.__sub__(amount)
     def __str__(self):
         return f"bankaccount(balance={self.balance})"      
 
@@ -27,10 +30,10 @@ class bankaccount:
 acc=bankaccount(1000)
 print(acc)        
 
-acc.__add__(500)
+acc.deposit(500)
 print(acc)
 
-acc.__sub__(550)
+acc.withdraw(550)
 print(acc)
 
 
