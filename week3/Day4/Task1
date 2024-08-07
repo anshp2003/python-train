@@ -1,0 +1,10 @@
+from contextlib import contextmanager
+
+@contextmanager
+def filename(filename,mode):
+    file1=open(filename,mode)
+    yield file1
+    file1.close()
+
+with filename("C:\\Users\\hp\\Desktop\\ansh\\python training\\week3\\demo.txt","r") as ansh:
+    print(ansh.read())    
