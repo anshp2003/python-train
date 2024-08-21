@@ -30,4 +30,4 @@ class item5Admin(admin.ModelAdmin):
 admin.site.register(item5, item5Admin)
 admin.site.register(Category)
 admin.site.register(Tag)
-# admin.site.register(itemimage)
+admin.site.register(itemimage)
