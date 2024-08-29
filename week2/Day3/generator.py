@@ -1,20 +1,23 @@
 
-def test_sequence():
-    num = 0
-    while num < 10:
-        yield num
-        num += 1
-for i in test_sequence():
-       print(i, end=",")
+# def test_sequence():
+#     num = 0
+#     while num < 10:
+#         yield num
+#         num += 1
+# for i in test_sequence():
+#        print(i, end=",")
 
-# def data_source():
-#     for i in range(100):
-#         yield i
+def data_source():
+    for i in range(100):
+        yield i
+for i in data_source():
+    print(i)
 
 # def filter_even_numbers(data):
 #     for number in data:
 #         if number % 2 == 0:
 #             yield number
+
 
 # def square_numbers(data):
 #     for number in range(10):
