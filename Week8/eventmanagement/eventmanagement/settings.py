@@ -161,12 +161,4 @@ STATICFILES_DIRS = [
     BASE_DIR , "static",
 ]
 
-# settings.py
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.email.com'  # Your SMTP server
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'anshpatel20003ap@gmail.com'
-EMAIL_HOST_PASSWORD = ''
-DEFAULT_FROM_EMAIL = 'Event Management <admin@example.com>'
