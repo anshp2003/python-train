@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management Platform</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #283E51, #4B79A1);
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: #232F3E;
+        }
+        .navbar-brand {
+            color: #FF9900;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .navbar-brand:hover {
+            color: #FF9900;
+        }
+        .nav-link {
+            color: #fff !important;
+            font-size: 1rem;
+        }
+        .jumbotron {
+            background: linear-gradient(to right, rgba(40, 62, 81, 0.85), rgba(75, 121, 161, 0.85));
+            color: #fff;
+            margin-top: 200px;
+            border-radius: 10px;
+            padding: 60px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .jumbotron h1 {
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .jumbotron p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .btn-custom {
+            background-color: #FF9900;
+            color: #232F3E;
+            border-radius: 5px;
+            font-weight: 600;
+            padding: 10px 20px;
+        }
+        .btn-custom:hover {
+            background-color: #cc7a00;
+            color: #fff;
+        }
+        footer {
+            background-color: #232F3E;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            .jumbotron h1 {
+                font-size: 2.5rem;
+            }
+            .jumbotron p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .jumbotron {
+                padding: 40px 20px;
+            }
+            .jumbotron h1 {
+                font-size: 2rem;
+            }
+            .jumbotron p {
+                font-size: 0.9rem;
+            }
+            .btn-custom {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container">
+            <a class="navbar-brand" href="#">Event Management</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'event_list' %}">Events</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link">{{ user.username }}</span>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="container ">
+        <div class="jumbotron text-center ">
+            <h1 class="display-4">Welcome to the Event Management Platform</h1>
+            <p class="lead">Discover, create, and manage events effortlessly.</p>
+            <a href="{% url 'event_list' %}" class="btn btn-custom btn-lg">Explore Events</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Event Management Platform. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
