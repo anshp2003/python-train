@@ -1,5 +1,5 @@
 # views.py
-from rest_framework import generics
+from rest_framework import generics # type: ignore
 from rest.models import Book
 from .serializers import BookSerializer
 
